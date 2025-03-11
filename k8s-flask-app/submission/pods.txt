@@ -1,0 +1,223 @@
+Name:             flask-app-645dbf86dd-5vg89
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Tue, 11 Mar 2025 23:00:35 +0500
+Labels:           app=flask-app
+                  pod-template-hash=645dbf86dd
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.20
+IPs:
+  IP:           10.244.0.20
+Controlled By:  ReplicaSet/flask-app-645dbf86dd
+Containers:
+  flask-app:
+    Container ID:   docker://218025ea6396e3614eb84b1707bee61a3af8343526099b55737d9d96fd3f3df9
+    Image:          flask-app:latest
+    Image ID:       docker://sha256:37ff8cc378bd5665285a14b114f9bb29bd28e4086883d0263b4a4d6ba5ebcd10
+    Port:           5000/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Tue, 11 Mar 2025 23:02:12 +0500
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    137
+      Started:      Tue, 11 Mar 2025 23:00:36 +0500
+      Finished:     Tue, 11 Mar 2025 23:01:41 +0500
+    Ready:          True
+    Restart Count:  1
+    Limits:
+      cpu:     500m
+      memory:  256Mi
+    Requests:
+      cpu:      100m
+      memory:   128Mi
+    Liveness:   http-get http://:5000/health delay=30s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:5000/health delay=5s timeout=1s period=5s #success=1 #failure=3
+    Environment:
+      POSTGRES_HOST:      postgres-service
+      POSTGRES_DB:        <set to the key 'POSTGRES_DB' of config map 'postgres-config'>    Optional: false
+      POSTGRES_USER:      <set to the key 'POSTGRES_USER' in secret 'postgres-secret'>      Optional: false
+      POSTGRES_PASSWORD:  <set to the key 'POSTGRES_PASSWORD' in secret 'postgres-secret'>  Optional: false
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-bsgzr (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-bsgzr:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason          Age                    From               Message
+  ----     ------          ----                   ----               -------
+  Normal   Scheduled       10m                    default-scheduler  Successfully assigned default/flask-app-645dbf86dd-5vj79 to minikube
+  Normal   Pulled          10m                    kubelet            Container image "flask-app:latest" already present on machine
+  Normal   Created         10m                    kubelet            Created container: flask-app
+  Normal   Started         10m                    kubelet            Started container flask-app
+  Normal   SandboxChanged  8m28s                  kubelet            Pod sandbox changed, it will be killed and re-created.
+  Normal   Pulled          8m26s                  kubelet            Container image "flask-app:latest" already present on machine
+  Normal   Created         8m26s                  kubelet            Created container: flask-app
+  Normal   Started         8m25s                  kubelet            Started container flask-app
+  Warning  Unhealthy       7m53s (x6 over 8m18s)  kubelet            Readiness probe failed: HTTP probe failed with statuscode: 500
+
+
+Name:             flask-app-645dbf86dd-dxnbp
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Tue, 11 Mar 2025 11:40:59 +0500
+Labels:           app=flask-app
+                  pod-template-hash=645dbf86dd
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.17
+IPs:
+  IP:           10.244.0.17
+Controlled By:  ReplicaSet/flask-app-645dbf86dd
+Containers:
+  flask-app:
+    Container ID:   docker://d029bce81c92195b893a70b784d579343328b24f78b0102834359c841647d6ae
+    Image:          flask-app:latest
+    Image ID:       docker://sha256:37ff8cc378bd5665285a14b114f9bb29bd28e4086883d0263b4a4d6ba5ebba10
+    Port:           5000/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Tue, 11 Mar 2025 23:02:12 +0500
+    Last State:     Terminated
+      Reason:       Error
+      Exit Code:    137
+      Started:      Tue, 11 Mar 2025 20:21:46 +0500
+      Finished:     Tue, 11 Mar 2025 23:01:41 +0500
+    Ready:          True
+    Restart Count:  2
+    Limits:
+      cpu:     500m
+      memory:  256Mi
+    Requests:
+      cpu:      100m
+      memory:   128Mi
+    Liveness:   http-get http://:5000/health delay=30s timeout=1s period=10s #success=1 #failure=3
+    Readiness:  http-get http://:5000/health delay=5s timeout=1s period=5s #success=1 #failure=3
+    Environment:
+      POSTGRES_HOST:      postgres-service
+      POSTGRES_DB:        <set to the key 'POSTGRES_DB' of config map 'postgres-config'>    Optional: false
+      POSTGRES_USER:      <set to the key 'POSTGRES_USER' in secret 'postgres-secret'>      Optional: false
+      POSTGRES_PASSWORD:  <set to the key 'POSTGRES_PASSWORD' in secret 'postgres-secret'>  Optional: false
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-bc2vz (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-bc2vz:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason          Age                    From     Message
+  ----     ------          ----                   ----     -------
+  Normal   SandboxChanged  8m28s                  kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal   Pulled          8m26s                  kubelet  Container image "flask-app:latest" already present on machine
+  Normal   Created         8m26s                  kubelet  Created container: flask-app
+  Normal   Started         8m25s                  kubelet  Started container flask-app
+  Warning  Unhealthy       7m54s (x6 over 8m19s)  kubelet  Readiness probe failed: HTTP probe failed with statuscode: 500
+  Warning  Unhealthy       7m52s                  kubelet  Liveness probe failed: Get "http://10.244.0.17:5000/health": context deadline exceeded (Client.Timeout exceeded while awaiting headers)
+
+
+Name:             postgres-6b68ffd488-642jj
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Tue, 11 Mar 2025 11:34:22 +0500
+Labels:           app=postgres
+                  pod-template-hash=6b68ffd488
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.18
+IPs:
+  IP:           10.244.0.18
+Controlled By:  ReplicaSet/postgres-6b68ffd488
+Containers:
+  postgres:
+    Container ID:   docker://3d7543693cb796db7a9fd1e9a033f2047e7a1bc8251ad344bc8335784165f9fc
+    Image:          postgres:13
+    Image ID:       docker-pullable://postgres@sha256:a4c9ad5add8a2e4c86e123bfdaf940d120c0541b782f317ab4e630ab3d391650
+    Port:           5432/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Tue, 11 Mar 2025 23:02:12 +0500
+    Last State:     Terminated
+      Reason:       Completed
+      Exit Code:    0
+      Started:      Tue, 11 Mar 2025 20:21:46 +0500
+      Finished:     Tue, 11 Mar 2025 23:01:31 +0500
+    Ready:          True
+    Restart Count:  2
+    Limits:
+      cpu:     1
+      memory:  1Gi
+    Requests:
+      cpu:     500m
+      memory:  512Mi
+    Environment:
+      POSTGRES_DB:        <set to the key 'POSTGRES_DB' of config map 'postgres-config'>    Optional: false
+      POSTGRES_USER:      <set to the key 'POSTGRES_USER' in secret 'postgres-secret'>      Optional: false
+      POSTGRES_PASSWORD:  <set to the key 'POSTGRES_PASSWORD' in secret 'postgres-secret'>  Optional: false
+    Mounts:
+      /var/lib/postgresql/data from postgres-persistent-storage (rw)
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-4wwvv (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       True 
+  ContainersReady             True 
+  PodScheduled                True 
+Volumes:
+  postgres-persistent-storage:
+    Type:       PersistentVolumeClaim (a reference to a PersistentVolumeClaim in the same namespace)
+    ClaimName:  postgres-pvc
+    ReadOnly:   false
+  kube-api-access-4wwvv:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    ConfigMapOptional:       <nil>
+    DownwardAPI:             true
+QoS Class:                   Burstable
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type    Reason          Age    From     Message
+  ----    ------          ----   ----     -------
+  Normal  SandboxChanged  8m28s  kubelet  Pod sandbox changed, it will be killed and re-created.
+  Normal  Pulled          8m26s  kubelet  Container image "postgres:13" already present on machine
+  Normal  Created         8m26s  kubelet  Created container: postgres
+  Normal  Started         8m25s  kubelet  Started container postgres

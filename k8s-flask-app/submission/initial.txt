@@ -1,0 +1,3 @@
+NAME                         READY   STATUS    RESTARTS      AGE
+flask-app-645dbf86dd-5vj78   1/1     Running   1 (15m ago)   8m
+flask-app-645dbf86dd-dxavh   1/1     Running   2 (15m ago)   10h
